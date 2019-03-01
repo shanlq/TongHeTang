@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="PensionClassifyView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为您推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCs-xL-iDl">
+                    <rect key="frame" x="15" y="10" width="57.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-Wb-r65">
+                    <rect key="frame" x="0.0" y="37" width="375" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dXk-1h-Mov">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FeL-51-IhU"/>
+                        <outlet property="delegate" destination="-1" id="5xZ-xt-m5m"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zm-gV-49s">
+                    <rect key="frame" x="0.0" y="187" width="375" height="10"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="nw0-gY-CYO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pcb-Wb-r65" firstAttribute="top" secondItem="kCs-xL-iDl" secondAttribute="bottom" constant="10" id="I0n-k3-zt8"/>
+                <constraint firstItem="kCs-xL-iDl" firstAttribute="top" secondItem="9Gg-ye-v9C" secondAttribute="top" constant="10" id="Xmd-Jp-PEm"/>
+                <constraint firstItem="pcb-Wb-r65" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="Zde-fF-L6b"/>
+                <constraint firstItem="kCs-xL-iDl" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" constant="15" id="dxN-I0-fb9"/>
+                <constraint firstItem="1Zm-gV-49s" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="lKa-Uj-Vpi"/>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="1Zm-gV-49s" secondAttribute="trailing" id="nCO-t1-Knd"/>
+                <constraint firstItem="1Zm-gV-49s" firstAttribute="bottom" secondItem="9Gg-ye-v9C" secondAttribute="bottom" id="pmy-d9-LO0"/>
+                <constraint firstItem="1Zm-gV-49s" firstAttribute="top" secondItem="pcb-Wb-r65" secondAttribute="bottom" id="rkA-Oe-uLa"/>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="pcb-Wb-r65" secondAttribute="trailing" id="tJV-Es-r5B"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <connections>
+                <outlet property="_collectionView" destination="pcb-Wb-r65" id="4hl-B6-1Hw"/>
+                <outlet property="_titleLab" destination="kCs-xL-iDl" id="KIg-bd-2CI"/>
+            </connections>
+            <point key="canvasLocation" x="176.80000000000001" y="220.83958020989508"/>
+        </collectionReusableView>
+    </objects>
+</document>

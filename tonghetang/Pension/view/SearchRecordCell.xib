@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchRecordCell" id="KGk-i7-Jjw" customClass="SearchRecordCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="40.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qh-g4-b9X">
+                        <rect key="frame" x="27" y="12" width="211.5" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="hNX-gr-HJg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="do3-sG-AKn">
+                        <rect key="frame" x="265.5" y="0.0" width="40.5" height="40.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="do3-sG-AKn" secondAttribute="height" id="3FV-uY-SOM"/>
+                        </constraints>
+                        <state key="normal" image="icon_close"/>
+                        <connections>
+                            <action selector="recordClear:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4ZK-RU-zUb"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="do3-sG-AKn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4dQ-sQ-iu4"/>
+                    <constraint firstAttribute="trailing" secondItem="do3-sG-AKn" secondAttribute="trailing" constant="14" id="7O1-Wl-FCr"/>
+                    <constraint firstItem="1Qh-g4-b9X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="27" id="7j7-TV-sWV"/>
+                    <constraint firstItem="1Qh-g4-b9X" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DhI-PP-Mzu"/>
+                    <constraint firstAttribute="bottom" secondItem="do3-sG-AKn" secondAttribute="bottom" id="fpE-C4-e8Y"/>
+                    <constraint firstItem="do3-sG-AKn" firstAttribute="leading" secondItem="1Qh-g4-b9X" secondAttribute="trailing" constant="27" id="zLU-2n-14v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="_deleteRecord" destination="do3-sG-AKn" id="iLB-53-Pgk"/>
+                <outlet property="_recordLabel" destination="1Qh-g4-b9X" id="fGg-zo-uWs"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="64.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_close" width="14" height="14"/>
+    </resources>
+</document>
